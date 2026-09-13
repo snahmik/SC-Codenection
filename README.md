@@ -159,10 +159,10 @@ As a result, Tidy helps users optimise their schedules and reduces the risk of f
 | Focus timer for study sessions                                       | Focus timer implementations have been widely implemented across dedicated apps, social channels and OS level tools.<br><br>A focus timer shifts our app towards policing how a student studies minute-by-minute rather than preventing academic burnout before it happens. <br><br>Introducing such a feature introduces feature bloat that diverges from the main goal of the application, which also does not help in making our application different from existing applications. |
 ### 2.2 Ideation Boards
 1) **AI Chatting User Flow**
- ![ai-chat-flow|509](ai-chat-flow-chart.png)
+ ![ai-chat-flow|509](ui-images/ai-chat-flow-chart.png)
 This flow chart illustrates the interaction of a user with the in-app AI chat. The interactions listed here would mostly take place within the AI chat panel itself, with dynamic message widgets that handles user interactions.
 2) **Task/Events Fetching User Flow**
- ![task-fetching-flow-chart|554](task-fetching-flow-chart.png)
+ ![task-fetching-flow-chart|554](ui-images/task-fetching-flow-chart.png)
 This flow chart illustrates the fetching of events and tasks from Google Calendar. It highlights the flow of core features within our app, including stress score calculations, task rescheduling suggestions and guided relaxations.
 
 **Other flow charts that have been created to visualise our app's flow can be found in the following link:** [Miro Board](https://miro.com/app/board/uXjVHrxLcGc=/?share_link_id=632907770894) 
@@ -184,18 +184,26 @@ This flow chart illustrates the fetching of events and tasks from Google Calenda
 **Key Screens:**
 1) **Homepage**  
    The homepage provides users with an immediate overview of their current workload and schedule. The AI Assistant is placed prominently at the top to provide personalised insights and can lead users directly into the AI Chat. Below it, the stress level section is broken down into five areas: Mental, Time, Physical, Social, and Errands. When the user's workload exceeds their personal limit, a "Rebalance Today" card appears, explaining the cause of the overload (e.g. "Stats revision is pushing today over the edge") and prompting the user to view rescheduling options via the Suggestions page. Today's Plan gives users a quick view of their upcoming commitments pulled from their Google Calendar and Google Tasks.
+![homepage1|270](ui-images/homepage-1.png)![homepage1|270](ui-images/homepage-2.png)
 2) **Task**  
    The Task page allows users to organise and manage their commitments throughout the day. Tasks are grouped into categories and can be expanded for more detail, while completed tasks are separated into their own section to help users keep track of progress without cluttering the active list.
-3) **Add**  
+![taskpage1|270](ui-images/task-1.png)![taskpage2|270](ui-images/task-2.png)
+3) **Add Task**
    The Add to Schedule page provides a unified way to add new commitments without requiring users to distinguish between tasks and events. Tidy uses the information provided, such as timing and deadlines, to determine how the commitment should be handled. For example, a specific start/end time behaves as an event, while a deadline alone behaves as a task. Users can also fill in the form using voice input via a floating action button (FAB), in addition to manual entry. This same page is also used when editing a commitment suggested through the AI Chat, in which case the fields are pre-filled based on what the user described, so they only need to review or adjust the details rather than start from scratch.
-4) **Add**  
-   The Add to Schedule page provides a unified way to add new commitments without requiring users to distinguish between tasks and events. Tidy uses the information provided, such as timing and deadlines, to determine how the commitment should be handled. For example, a specific start/end time behaves as an event, while a deadline alone behaves as a task. Users can also fill in the form using voice input via a floating action button (FAB), in addition to manual entry. This same page is also used when editing a commitment suggested through the AI Chat, in which case the fields are pre-filled based on what the user described, so they only need to review or adjust the details rather than start from scratch.
+![addTaskPage1|270](ui-images/add-task.png)
+4) **Alert**  
+   When a new or edited commitment would push the user's workload beyond their personal threshold, Tidy surfaces an alert before the change is confirmed. The alert shows the resulting change in workload percentage along with the specific reason for the overload, such as overlapping deadlines, so users understand exactly why they're being flagged rather than receiving a generic warning. From here, users can choose to add the commitment anyway or view rescheduling suggestions instead. 
+![alertPage|270](ui-images/alert.png)
+
 5) **Suggestion**  
    From an overload alert or the homepage's rebalance card, users can view rescheduling suggestions to help resolve the overload. Each suggestion is presented as an option that can be expanded to show exactly what would change, including the original and proposed date or time, allowing users to clearly understand the impact of each option before deciding rather than applying a change blindly. Users can apply a suggestion directly, or choose to edit it further before confirming.
+   ![suggestionPage1|270](ui-images/suggestion-1.png)![suggestionPage2|270](ui-images/suggestion-2.png)
 6) **AI Chat**  
    The AI Chat is the main interaction point of Tidy, allowing users to manage their workload through natural language. Users can describe commitments, check their workload, or seek recommendations. For example, a plain-language message such as "I have a birthday party tomorrow from 7 to 9pm" is parsed directly into an event preview card with Approve, Edit, or Decline actions. Approve adds the commitment directly to the user's calendar, Edit redirects to the prefilled Add to Schedule page for further adjustment, and Decline dismisses the commitment while having Tidy draft a ready-to-send message on the user's behalf rather than simply discarding the request. Users can also check in with Tidy about how they are feeling, allowing mood information to support more personalised recommendations.
+   ![aiChatPage|270](ui-images/ai-chat.png)
 7) **Wellness**  
    The Wellness page provides recovery support through categories such as Quick Relief, Music, Sleep & Wind Down, and Move & Refresh, each linked to guided videos users can follow along with. These resources give users simple, low-effort ways to recover when they are feeling stressed or overloaded, without introducing additional tasks, scores, or streaks to maintain.
+   ![wellnessPage|270](ui-images/wellness.png)
 # 4. What Makes It Different
 Tidy’s originality comes from connecting productivity and wellness into one prevention cycle. Instead of only organising tasks or offering general relaxation activities,Tidy begins with an onboarding baseline and gradually improves its understanding through AI conversations and behavioural patterns. It then converts this information into personalised workload reports, stress-risk predictions and practical recommendations.  Tidy uses the student’s workload and current well-being to predict overload, explain its causes and recommend actions before burnout develops.
 
@@ -252,5 +260,36 @@ The novelty comes from combining conversational memory, schedule behaviour, work
 		- Google OAuth will be used to connect the user’s google account to our app. Google calendar and google tasks will allow us to access any commitments or tasks that the users may have already been added before instead of needing for the user to recreate already present tasks or events.
 		- The User must grant necessary Google permissions before the app can access their calendar or tasks.The service also requires internet connectivity and uses different API structures, which needs to be handled  by the backend.
 ### 5.2 Build Plan and Scope
-- **Week 1**
-	- 
+- **Build Plan**
+	- **Week 1**
+		- Setup the flutter mobile application
+		- Build the onboarding flow
+		- Setup supbase database
+		- Implement user authentication
+		- Connect flutter with supabase
+		- Implement basic  task management
+		- Implement basic event management
+		- Store the onboarding responses and commitments
+	- **Week 2**
+		- Integrate gemini ai chatbot
+		- Build the ai chat interface
+		- Implement natural language interpretation for tasks and events
+		- Connect google calendar api
+		- Connect google tasks api
+		- Implement the ai  generated scheduling suggestions
+		- Implement approve edit and reject workflow
+		- Sync the approved actions with its relevant google services.
+	- **Week 3**
+		- Implement basic workload calculation
+		- Implement stress risk calculation
+		- Set up conversational memory using pgvector.
+		- Retrieve relevant past conversational context
+		- Generate personalized workload recommendations
+		- Integrate all the system components
+		- Perform system testing
+		- Fix any bugs and ui issues
+		- Prepare the final prototype for demonstration
+- **Scope**
+	The MVP will focus on demonstrating this complete workflow. Our advanced features like burnout prediction, fully automated schedule management, and historical analytics and a complete content recovery system will not be prioritised during our three week building phase. Our primary goal is to demonstrate that our app can understand the student’s commitments and personal context, provide an explainable recommendation and assist the user in managing their workload through the ai chat bot.
+	
+	
