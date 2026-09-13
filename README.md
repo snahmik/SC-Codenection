@@ -28,10 +28,10 @@
 | Focus timer for study sessions                                       | Focus timer implementations have been widely implemented across dedicated apps, social channels and OS level tools.<br><br>A focus timer shifts our app towards policing how a student studies minute-by-minute rather than preventing academic burnout before it happens. <br><br>Introducing such a feature introduces feature bloat that diverges from the main goal of the application, which also does not help in making our application different from existing applications. |
 ### Ideation Boards
 1) AI Chatting User Flow
-![[Screenshot 2026-09-13 at 2.46.05 PM.png]]
+![[ai-chat-flow-chart.png]]
 This flow chart illustrates the interaction of a user with the in-app AI chat. The interactions listed here would mostly take place within the AI chat panel itself, with dynamic message widgets that handles user interactions.
 2) Task/Events Fetching User Flow
-![[Screenshot 2026-09-13 at 2.52.56 PM.png]]
+![[task-fetching-flow-chart.png]]
 This flow chart illustrates the fetching of events and tasks from Google Calendar. It highlights the flow of core features within our app, including stress score calculations, task rescheduling suggestions and guided relaxations.
 
 **Other flow charts that have been created to visualise our app's flow can be found in the following link:** [Miro Board](https://miro.com/app/board/uXjVHrxLcGc=/?share_link_id=632907770894) 
