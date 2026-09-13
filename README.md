@@ -27,11 +27,14 @@
 | Historical mood tracker that logs each mood entry provided by a user | Storing a log of mood entries does not align with our app’s core functionality of managing a student’s task and stress levels, and instead shifts our app to be more of an emotion/journalling app<br><br>Mood entries will only be used at the time of change itself for the AI to calculate a more personalised/accurate stress score alongside better rescheduling suggestions                                                                                                    |
 | Focus timer for study sessions                                       | Focus timer implementations have been widely implemented across dedicated apps, social channels and OS level tools.<br><br>A focus timer shifts our app towards policing how a student studies minute-by-minute rather than preventing academic burnout before it happens. <br><br>Introducing such a feature introduces feature bloat that diverges from the main goal of the application, which also does not help in making our application different from existing applications. |
 ### Ideation Boards
-1) AI Chatting User Flow
- ![ai-chat-flow](ai-chat-flow-chart.png)
+1) **AI Chatting User Flow**
+ ![ai-chat-flow|509](ai-chat-flow-chart.png)
 This flow chart illustrates the interaction of a user with the in-app AI chat. The interactions listed here would mostly take place within the AI chat panel itself, with dynamic message widgets that handles user interactions.
-2) Task/Events Fetching User Flow
- ![task-fetching-flow-chart](task-fetching-flow-chart.png)
+2) **Task/Events Fetching User Flow**
+ ![task-fetching-flow-chart|554](task-fetching-flow-chart.png)
+This flow chart illustrates the fetching of events and tasks from Google Calendar. It highlights the flow of core features within our app, including stress score calculations, task rescheduling suggestions and guided relaxations.
+
+**Other flow charts that have been created to visualise our app's flow can be found in the following link:** [Miro Board](https://miro.com/app/board/uXjVHrxLcGc=/?share_link_id=632907770894) 
 ### Mentor Feedback
 
 | **Date**                      | **Mentor**    | **Feedback Received**                                                                                                                                                         | **What Was Changed**                                                                                                                                            |
