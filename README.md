@@ -2,7 +2,7 @@
 
 **Team:** Er Rui Xian, Ho Wan Zhen, Hans Kim Qin Duan, Ong Zi Rui.  
 **Problem Statement:** Stress & Workload Manager.   
-**Video Presentation:**  [https://youtu.be/2WJzPt55qns?si=oSkXS0_O-zssUMlS](https://youtu.be/2WJzPt55qns?si=oSkXS0_O-zssUMlS). 
+**Video Presentation:**  [https://youtu.be/2WJzPt55qns?si=oSkXS0_O-zssUMlS](https://youtu.be/2WJzPt55qns?si=oSkXS0_O-zssUMlS).     
 **Presentation Slides:** [https://canva.link/qmigoi7tq8240jg](https://canva.link/qmigoi7tq8240jg). 
 ## 1. Project Overview
 Tidy is a student-centred workload and burnout-prevention application that helps university students understand their workload before they become overwhelmed. Tidy begins with an onboarding baseline and gradually improves its understanding through AI conversations and behavioural patterns. This information is used to refine the user’s capacity score, predict overload and provide increasingly personalised schedule and recovery recommendations. 
